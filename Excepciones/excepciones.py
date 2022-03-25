@@ -11,16 +11,16 @@ import re
 
 contador = 3
 def introduzca_correo():
+    print(contador)
     print("Introduzca la direccion de correo electronico")
     correo = input()
     correcto = re.search(". * @. * ", correo)
     if correcto == None:
-        if "." not in correo:
-            print("Correo no válido, le falta el punto")
-        else:
-            print("Le falta el @. Vuelve a intentar")
+        print("no es valido. Le quedan " + str(contador) + "intentos")
         contador = contador - 1
         introduzca_correo()
+        if contador == 0:
+            print("La sesion ha sido bloqueada por demasiados fallos")
     else:
         print("bienvenido")
 introduzca_correo()
