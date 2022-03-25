@@ -14,7 +14,7 @@ def introduzca_correo(contador):
     print(contador)
     print("Introduzca la direccion de correo electronico")
     correo = input()
-    correcto = re.search(". * @. * ", correo)
+    correcto = re.search("@ ", correo)
     if correcto == None:
         print("no es valido. Le quedan " + str(contador - 1) + " intentos")
         if contador != 0:
