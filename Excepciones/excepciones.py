@@ -9,8 +9,8 @@ import re
         self.correo = correo'''
 
 
-contador = 3
-def introduzca_correo():
+
+def introduzca_correo(contador):
     print(contador)
     print("Introduzca la direccion de correo electronico")
     correo = input()
@@ -18,9 +18,11 @@ def introduzca_correo():
     if correcto == None:
         print("no es valido. Le quedan " + str(contador) + "intentos")
         contador = contador - 1
-        introduzca_correo()
+        introduzca_correo(contador)
         if contador == 0:
             print("La sesion ha sido bloqueada por demasiados fallos")
     else:
         print("bienvenido")
-introduzca_correo()
+
+contador = 3
+introduzca_correo(contador)
