@@ -16,15 +16,20 @@ def introduzca_correo(contador):
     correcto = re.search("@", correo)
     correcto2 = re.search(".", correo)
     if correcto == None:
-        if correcto2 == None
-            print("no es valido. Le quedan " + str(contador - 1) + " intentos")
-            if contador != 0:
-                contador = contador - 1
-                introduzca_correo(contador)
-            else:
-                print("La sesion ha sido bloqueada por demasiados intentos")
-        
-       
+        print("no es valido. Le quedan " + str(contador - 1) + " intentos")
+        if contador != 0:
+            contador = contador - 1
+            introduzca_correo(contador)
+        else:
+            print("La sesion ha sido bloqueada por demasiados intentos")
+
+    elif correcto2 == None:
+        print("no es valido. Le quedan " + str(contador - 1) + " intentos")
+        if contador != 0:
+            contador = contador - 1
+            introduzca_correo(contador)
+        else:
+            print("La sesion ha sido bloqueada por demasiados intentos")  
     else:
         print("bienvenido")
 
