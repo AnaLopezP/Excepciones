@@ -1,3 +1,6 @@
+from operator import truediv
+
+
 correos_registrados = ["vicente@eni.com", "pepecasas@eni.com", "doloresbarriga@eni.com"]
 class web:
     def __init__(self, listcorreo):
@@ -7,9 +10,24 @@ class web:
     def set_listcorreo(self, listcorreo):
         self.listcorreo = listcorreo
 
+def validar_formato(correo):
+    arroba = "@"
+    punto = "."
+    if punto and arroba in correo:
+        return True
+    else:
+        return False
 
 
-def introduzca_correo(contador):
+
+
+
+
+
+
+
+    
+'''def introduzca_correo(contador):
     print("Introduzca la direccion de correo electronico")
     print(contador)
     correo = str(input())
@@ -23,7 +41,7 @@ def introduzca_correo(contador):
             contador = contador - 1
             introduzca_correo(contador)
         else:
-            print("La sesion ha sido bloqueada por demasiados intentos")
+            print("La sesion ha sido bloqueada por demasiados intentos")'''
 
 contador = 3
 introduzca_correo(contador)
