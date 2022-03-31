@@ -26,7 +26,9 @@ class web:
 def validar_formato(correo):
     arroba = "@"
     punto = "."
-    if punto and arroba not in correo:
+    if punto not in correo: 
+        raise formato_excepcion("Formato incorrecto")
+    if arroba not in correo:
         raise formato_excepcion("Formato incorrecto")
 
 def reconocer_correo(correo):
