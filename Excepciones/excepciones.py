@@ -22,4 +22,8 @@ def validar_formato(correo):
     if punto and arroba not in correo:
         raise formato_excepcion("Formato incorrecto")
 
+def reconocer_correo(correo):
+    if correo not in correos_registrados:
+        raise formato_excepcion("Este correo no esta registrado")
+
 
