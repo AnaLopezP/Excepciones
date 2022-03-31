@@ -6,7 +6,7 @@ if __name__ == "__main__":
     correo = str(input())
     try:
         excepciones.validar_formato(correo)
-    except Exception:
+    except excepciones.formato_excepcion:
         print("Esta mal el correo")
     else:
         print("todo bien")
