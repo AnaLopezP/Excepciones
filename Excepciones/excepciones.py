@@ -3,12 +3,12 @@ from asyncio import exceptions
 from traceback import format_exception
 
 correos_registrados = ["vicente@eni.com", "pepecasas@eni.com", "doloresbarriga@eni.com"]
-class formato_excepcion(exceptions):
+'''class formato_excepcion(exceptions):
     def __init__(self, mensaje):
         self.mensaje = mensaje
 
     def get_mensaje(self):
-        return self.mensaje
+        return self.mensaje'''
 
 class web:
     def __init__(self, listcorreo):
@@ -22,6 +22,6 @@ def validar_formato(correo):
     arroba = "@"
     punto = "."
     if punto and arroba not in correo:
-        raise format_exception("Formato incorrecto")
+        raise Exception("Formato incorrecto")
 
 

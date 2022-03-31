@@ -1,4 +1,4 @@
-from traceback import format_exception
+
 import excepciones
 
 if __name__ == "__main__":
@@ -6,7 +6,7 @@ if __name__ == "__main__":
     correo = str(input())
     try:
         excepciones.validar_formato(correo)
-    except format_exception:
+    except Exception:
         print("Esta mal el correo")
     else:
         print("todo bien")
