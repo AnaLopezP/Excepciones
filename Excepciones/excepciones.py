@@ -1,5 +1,3 @@
-from errno import ESTALE
-
 
 class web:
     def __init__(self, correo):
@@ -25,13 +23,12 @@ class web:
 
 
 def introduzca_correo(contador):
+    print("Introduzca la direccion de correo electronico")
     print(contador)
-    correo = input()
+    correo = str(input())
     noc = web(correo)
-    correcto = "@"
-    correcto2 = "."
-    print(correcto)
-    print(correcto2)
+    noc.esta_arroba()
+    noc.esta_punto()
     if noc.esta_arroba == True and noc.esta_punto == True:
         print("bienvenido")
     else:
@@ -42,6 +39,5 @@ def introduzca_correo(contador):
         else:
             print("La sesion ha sido bloqueada por demasiados intentos")
 
-print("Introduzca la direccion de correo electronico")
 contador = 3
 introduzca_correo(contador)
