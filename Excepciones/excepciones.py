@@ -8,6 +8,13 @@ class formato_excepcion(BaseException):
     def get_mensaje(self):
         return self.mensaje
 
+class correo_excepcion(BaseException):
+    def __init__(self, mensaje):
+        self.mensaje = mensaje
+
+    def get_mensaje(self):
+        return self.mensaje
+
 class web:
     def __init__(self, listcorreo):
         self.listcorreo = listcorreo
@@ -24,6 +31,6 @@ def validar_formato(correo):
 
 def reconocer_correo(correo):
     if correo not in correos_registrados:
-        raise formato_excepcion("Este correo no esta registrado")
+        raise correo_excepcion("Este correo no esta registrado")
 
 
