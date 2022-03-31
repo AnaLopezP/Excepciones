@@ -9,4 +9,11 @@ if __name__ == "__main__":
     except excepciones.formato_excepcion as e:
         print(e.get_mensaje())
     else:
-        print("todo bien")
+        print("formato correcto")
+    
+    try:
+        excepciones.reconocer_correo(correo)
+    except excepciones.formato_excepcion as e:
+        print(e.get_mensaje())
+    else:
+        print("Bienvenid@")
