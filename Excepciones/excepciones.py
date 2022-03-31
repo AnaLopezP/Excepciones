@@ -15,7 +15,7 @@ def introduzca_correo(contador):
     correcto2 = "."
     print(correcto)
     print(correcto2)
-    if correcto in correo:
+    if correcto not in correo:
         print("no es valido. Le quedan " + str(contador - 1) + " intentos")
         if contador != 1:
             contador = contador - 1
@@ -23,7 +23,7 @@ def introduzca_correo(contador):
         else:
             print("La sesion ha sido bloqueada por demasiados intentos")
 
-    elif correcto2 in correo:
+    elif correcto2 not in correo:
         print("no es valido. Le quedan " + str(contador - 1) + " intentos")
         if contador != 1:
             contador = contador - 1
