@@ -7,29 +7,29 @@ class web:
     def set_correo(self, correo):
         self.correo = correo
 
-    def esta_arroba(correo):
+def esta_arroba(correo):
         arroba = "@"
         if arroba in correo:
             return True
         else:
             return False
 
-    def esta_punto(correo):
+def esta_punto(correo):
         punto = "."
         if punto in correo:
             return True
         else:
             return False
 
-
 def introduzca_correo(contador):
     print("Introduzca la direccion de correo electronico")
     print(contador)
     correo = str(input())
-    noc = web(correo)
-    noc.esta_arroba()
-    noc.esta_punto()
-    if noc.esta_arroba == True and noc.esta_punto == True:
+    esta_arroba(correo)
+    print(esta_arroba)
+    esta_punto(correo)
+    print(esta_punto)
+    if esta_arroba == True and esta_punto == True:
         print("bienvenido")
     else:
         print("no es valido. Le quedan " + str(contador - 1) + " intentos")
