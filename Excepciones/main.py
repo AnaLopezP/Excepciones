@@ -17,17 +17,6 @@ if __name__ == "__main__":
                 raise err
             else:
                 print("Todo correcto")
+                contador = 3
     except excepciones.correo_excepcion as ki:
         print(ki.get_mensaje())  
-
-
-
-'''
-try:
-    excepciones.reconocer_correo(correo)
-except excepciones.formato_excepcion as e:
-    print(e.get_mensaje())
-else:
-    print("Bienvenid@")
-    except excepciones.correo_excepcion as err:
-                print(err.get_mensaje())'''
