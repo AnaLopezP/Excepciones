@@ -1,11 +1,11 @@
-
+correos_registrados = ["vicente@eni.com", "pepecasas@eni.com", "doloresbarriga@eni.com"]
 class web:
-    def __init__(self, correo):
-        self.correo = correo
-    def get_correo(self):
-        return self.correo
-    def set_correo(self, correo):
-        self.correo = correo
+    def __init__(self, listcorreo):
+        self.listcorreo = listcorreo
+    def get_listcorreo(self):
+        return self.listcorreo
+    def set_listcorreo(self, listcorreo):
+        self.listcorreo = listcorreo
 
 
 
